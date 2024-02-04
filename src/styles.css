@@ -3,13 +3,24 @@ body {
 }
 
 .weatherBox {
+  display: grid;
+  grid-template-areas:
+    "searchBar searchBar searchBar"
+    "cityName cityName cityName"
+    "cityInfo cityInfo tempIcon"
+    "space space space"
+    "footer footer footer";
+
   background-color: #63888985;
   padding: 30px;
-  max-width: 75%;
+  max-width: 60%;
   min-height: 50%;
   margin: 0 auto;
   margin-top: 60px;
   border-radius: 5px;
+}
+form {
+  grid-area: searchBar;
 }
 #searchBar {
   margin-left: 25%;
@@ -37,11 +48,12 @@ body {
   color: #d0c7b5;
 }
 #cityName {
+  grid-area: cityName;
   color: rgb(73, 72, 72);
 }
 p {
   color: rgb(73, 72, 72);
-  display: inline-block;
+  grid-area: cityInfo;
 }
 
 .makeBold {
@@ -49,28 +61,24 @@ p {
 }
 
 footer {
+  grid-area: footer;
   color: #4d6566;
-  margin-left: 20%;
-  margin-right: 20%;
 }
 img {
   display: inline;
 }
 #iconTemp {
-  position: relative;
-  top: -100px;
-  margin-right: 10%;
-  margin-left: 50%;
+  grid-area: tempIcon;
 }
 
 #currTemp {
-  font-size: 50px;
+  font-size: 45px;
   position: relative;
   top: -30px;
 }
 
 #degree {
   position: relative;
-  top: -55px;
-  font-size: 19px;
+  top: -50px;
+  font-size: 15px;
 }

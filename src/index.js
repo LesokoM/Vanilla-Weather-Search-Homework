@@ -23,13 +23,9 @@ function changeWeatherInfo(response) {
   let wind = document.querySelector("#wind");
   wind.innerHTML = response.data.wind.speed;
   let myIcon = document.querySelector("#icon");
-  console.log(myIcon);
   let temp = document.querySelector("#currTemp");
-  console.log(temp);
   myIcon.src = response.data.condition.icon_url;
-  temp.innerHTML = response.data.temperature.current;
-  console.log(myIcon);
-  console.log(temp);
+  temp.innerHTML = Math.round(response.data.temperature.current);
 }
 axios.get(myUrl).then(changeWeatherInfo);
 
