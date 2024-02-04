@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Weather Application</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="weatherBox">
+  <form id = "searchForm" ></form><input type = "search" id="searchBar" placeholder="Enter a city..."></input> 
+        <input type = "submit" value = "Search" id="searchBtn"></input></form>
+      
+    
+       <h1 id="cityName">Paris</h1>
+   <p><span id="dateTime">Monday 19:07</span>, <span id="forecast">light rain</span>   
+         <br><br>Humidity: <span id="humidity"  class="makeBold"> 84%</span>%, Wind: <span id="wind" class="makeBold">2.14</span><b>km/h</b>
+        </p>
+
+   <span id="iconTemp">   
+ <img src=" " id="icon">
+ <span id="currTemp" class="makeBold">50</span> <span id="degree">°C  </span>
+</span> 
+
+
+<br><br><br><br><br>
+
+<footer>
+        This project was coded by <a href="#">Lesoko Monyepao</a>, is <a href="#"> open-sourced on GitHub</a> and <a href="#">hosted on Netlify</a>
+    </footer><
+
+
+    </div>
+
+    
+    <script src="src/index.js"></script>
+  </body>
+</html>

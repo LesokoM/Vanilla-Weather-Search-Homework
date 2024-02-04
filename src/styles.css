@@ -1,0 +1,76 @@
+body {
+  background-color: #f9efdb;
+}
+
+.weatherBox {
+  background-color: #63888985;
+  padding: 30px;
+  max-width: 75%;
+  min-height: 50%;
+  margin: 0 auto;
+  margin-top: 60px;
+  border-radius: 5px;
+}
+#searchBar {
+  margin-left: 25%;
+
+  display: inline;
+  width: 40%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9efdb;
+  border-style: none;
+}
+
+#searchBtn {
+  padding: 10px;
+  border-radius: 5px;
+  width: 100px;
+  border-style: none;
+  background-color: #d0c7b5;
+  color: #63888985;
+  font-weight: bold;
+}
+
+#searchBtn:hover {
+  background-color: #63888985;
+  color: #d0c7b5;
+}
+#cityName {
+  color: rgb(73, 72, 72);
+}
+p {
+  color: rgb(73, 72, 72);
+  display: inline-block;
+}
+
+.makeBold {
+  font-weight: bolder;
+}
+
+footer {
+  color: #4d6566;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+img {
+  display: inline;
+}
+#iconTemp {
+  position: relative;
+  top: -100px;
+  margin-right: 10%;
+  margin-left: 50%;
+}
+
+#currTemp {
+  font-size: 50px;
+  position: relative;
+  top: -30px;
+}
+
+#degree {
+  position: relative;
+  top: -55px;
+  font-size: 19px;
+}
