@@ -63,6 +63,7 @@ p {
 footer {
   grid-area: footer;
   color: #4d6566;
+  margin: 0 auto;
 }
 img {
   display: inline;
