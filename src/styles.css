@@ -8,7 +8,7 @@ body {
     "searchBar searchBar searchBar searchBar searchBar"
     "cityName cityName cityName  cityName cityName"
     "cityInfo cityInfo cityInfo cityInfo tempIcon"
-    "forecast1 forecast2 forecast3 forecast4 forecast5"
+    "forecast forecast forecast forecast forecast"
     "footer footer footer footer footer";
 
   background-color: #63888985;
@@ -86,9 +86,16 @@ img {
 }
 
 #forecastDays {
+  grid-area: forecast;
+  padding-bottom: 50px;
   display: flex;
-  justify-content: center;
   justify-content: space-between;
+  color: #295052;
+}
+#forecast {
+  text-align: center;
+}
 
-  border: solid blue;
+#forecast img {
+  width: 60px;
 }
