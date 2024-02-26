@@ -5,11 +5,11 @@ body {
 .weatherBox {
   display: grid;
   grid-template-areas:
-    "searchBar searchBar searchBar"
-    "cityName cityName cityName"
-    "cityInfo cityInfo tempIcon"
-    "space space space"
-    "footer footer footer";
+    "searchBar searchBar searchBar searchBar searchBar"
+    "cityName cityName cityName  cityName cityName"
+    "cityInfo cityInfo cityInfo cityInfo tempIcon"
+    "forecast1 forecast2 forecast3 forecast4 forecast5"
+    "footer footer footer footer footer";
 
   background-color: #63888985;
   padding: 30px;
@@ -83,4 +83,12 @@ img {
   position: relative;
   top: -50px;
   font-size: 15px;
+}
+
+#forecastDays {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+
+  border: solid blue;
 }

@@ -11,9 +11,8 @@ let days = [
 let myApiKey = "48bf6of5134a63ab203acfc50316tbd4";
 let units = "metric";
 let currentCity = document.querySelector("#cityName").innerHTML;
-console.log(currentCity);
+
 let myUrl = `https://api.shecodes.io/weather/v1/current?query=${currentCity}&key=${myApiKey}&units=${units}`;
-console.log(myUrl);
 
 function changeWeatherInfo(response) {
   let currentWeather = document.querySelector("#forecast");
@@ -26,6 +25,7 @@ function changeWeatherInfo(response) {
   let temp = document.querySelector("#currTemp");
   myIcon.src = response.data.condition.icon_url;
   temp.innerHTML = Math.round(response.data.temperature.current);
+  getData(response.data.city);
 }
 axios.get(myUrl).then(changeWeatherInfo);
 
@@ -56,4 +56,28 @@ function updateInfo(event) {
 let searchBox = document.querySelector("#searchForm");
 searchBox = addEventListener("submit", updateInfo);
 dateCreation();
-findCity();
+
+function getData(city) {
+  let apiKey = "48bf6of5134a63ab203acfc50316tbd4";
+  let myUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=${units}`;
+  axios(myUrl).then(forecast);
+}
+
+function forecast(response) {
+  console.log(response.data);
+  let forecastD = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecast = document.querySelector("#forecastDays");
+  let forecastHtml = "";
+  forecastD.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+      <div>
+    <span id="day">${day}</span> <br>
+    <span  id="icon">🌧️</span><br>
+    <span id="temp"><span id="minTemp">30</span>°<span id="maxTemp">20</span>°</div> 
+        </div>`;
+  });
+
+  forecast.innerHTML = forecastHtml;
+}
